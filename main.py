@@ -31,11 +31,11 @@ def main():
             password = input('Please enter your password to encode: ')
             encoded_pswd = encode(password)
             print('Your password has been encoded and stored!')
-        elif option == '2':
+        elif option == 2:
             decoded_pswd = decoder.decode(encoded_pswd)
             print(f"The encoded password is {encoded_pswd},",
                   f"and the original password is {decoded_pswd}")
-        elif option == '3':
+        elif option == 3:
             quit()
         else:
             print('Invalid Option')
