@@ -2,9 +2,10 @@
 
 # Adds pswd by three and goes back to ones place when needed
 def encode(password):
+    encoded_pswd = ''
     for i in password:
-        encoded_pswd = ''
-        encoded = int(i + 3)
+        encoded = int(i)
+        encoded += 3
         if encoded <= 9:
             encoded = str(encoded)
         elif encoded > 9:
@@ -16,6 +17,7 @@ def encode(password):
 
 def main():
     option = 0
+    encoded_pswd = ''
     while option != 3:
         print('Menu\n'
               '-------------\n'
@@ -23,9 +25,9 @@ def main():
               '2. Decode\n'
               '3. Quit')
         option = int(input('Please enter an option'))
-        if option == '1':
+        if option == 1:
             password = input('Please enter your password to encode: ')
-            encode(password)
+            encoded_pswd = encode(password)
             print('Your password has been encoded and stored!')
         elif option == '2':
             pass
