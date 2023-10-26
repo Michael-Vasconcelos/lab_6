@@ -1,5 +1,7 @@
 # Author Michael Vasconcelos
 
+import decoder
+
 # Adds pswd by three and goes back to ones place when needed
 def encode(password):
     encoded_pswd = ''
@@ -30,7 +32,9 @@ def main():
             encoded_pswd = encode(password)
             print('Your password has been encoded and stored!')
         elif option == '2':
-            pass
+            decoded_pswd = decoder.decode(encoded_pswd)
+            print(f"The encoded password is {encoded_pswd},",
+                  f"and the original password is {decoded_pswd}")
         elif option == '3':
             quit()
         else:
